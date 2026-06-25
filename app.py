@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 import shap
 import plotly.graph_objects as go
-from streamlit_shap import st_shap
+import matplotlib.pyplot as plt
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(page_title="Churn Dashboard", page_icon="📡", layout="wide")
@@ -194,12 +194,17 @@ s1, s2 = st.columns([2, 1])
 with s1:
     with st.container(border=True):
         st.markdown("##### 🔍 SHAP Explanation")
-        st_shap(shap.plots.waterfall(
+        shap.plots.waterfall(
             shap.Explanation(
                 values=shap_row, base_values=explainer.expected_value[1],
                 data=input_df.iloc[0], feature_names=feature_columns
-            )
-        ), height=380)
+            ),
+            show=False
+        )
+        fig = plt.gcf()
+        fig.set_size_inches(10, 6)
+        st.pyplot(fig, use_container_width=True)
+        plt.close(fig)
 
 with s2:
     with st.container(border=True):
