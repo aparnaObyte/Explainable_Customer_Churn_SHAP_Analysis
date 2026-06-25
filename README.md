@@ -67,7 +67,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-**Live demo:** [Add your deployed Streamlit Cloud link here]
+**Live demo:** [https://explainablecustomerchurnshapanalysis-cpct9ujlxpz3sdfiafbm3v.streamlit.app/]
 
 > **Note:** The notebook is the primary, required deliverable for this project — it independently satisfies the full project brief (EDA, ensemble modeling, SHAP explainability). The Streamlit app is an additional interactive layer built on top of the same model and SHAP explainer, allowing live, per-customer churn risk exploration.
 
@@ -75,6 +75,4 @@ streamlit run app.py
 
 `pandas` `numpy` `scikit-learn` `xgboost` `shap` `seaborn` `matplotlib` `streamlit` `plotly`
 
-## 📌 Author
 
-Built as part of an internship project on explainable AI for customer analytics.
