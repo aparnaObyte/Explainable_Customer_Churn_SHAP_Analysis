@@ -6,3 +6,5 @@ xgboost
 shap
 streamlit-shap
 plotly
+matplotlib
+seaborn
